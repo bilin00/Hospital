@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>Login</display-name>
+  <servlet-mapping>
+    <servlet-name>default</servlet-name>
+    <url-pattern>*.css</url-pattern>
+    <url-pattern>*.js</url-pattern>
+    <url-pattern>*.png</url-pattern>
+    <url-pattern>*.gif</url-pattern>
+    <url-pattern>*.jpg</url-pattern>
+  </servlet-mapping>
+  <welcome-file-list>
+    <welcome-file>welcome.jsp</welcome-file>
+    <welcome-file>/admin/login.jsp</welcome-file>
+  </welcome-file-list>
+
+<!-- 设置session过期时间 min -->
+ <session-config>
+  　　<session-timeout>30</session-timeout>
+ </session-config> 
+ <!-- session过滤器配置相关 -->
+
+
+  <servlet>
+    <servlet-name>AdLogin</servlet-name>
+    <servlet-class>com.myh.adsvlt.AdLogin</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AdLogin</servlet-name>
+    <url-pattern>/AdLogin</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>AdAdd</servlet-name>
+    <servlet-class>com.myh.adsvlt.AdAdd</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AdAdd</servlet-name>
+    <url-pattern>/AdAdd</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>AdUpdate</servlet-name>
+    <servlet-class>com.myh.adsvlt.AdUpdate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AdUpdate</servlet-name>
+    <url-pattern>/AdUpdate</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>AdDelete</servlet-name>
+    <servlet-class>com.myh.adsvlt.AdDelete</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AdDelete</servlet-name>
+    <url-pattern>/AdDelete</url-pattern>
+  </servlet-mapping>
+
+
+  <servlet>
+    <servlet-name>DeptList</servlet-name>
+    <servlet-class>com.myh.deptsvlt.DeptList</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DeptList</servlet-name>
+    <url-pattern>/DeptList</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>DeptDelete</servlet-name>
+    <servlet-class>com.myh.deptsvlt.DeptDelete</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DeptDelete</servlet-name>
+    <url-pattern>/DeptDelete</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>DeptAdd</servlet-name>
+    <servlet-class>com.myh.deptsvlt.DeptAdd</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DeptAdd</servlet-name>
+    <url-pattern>/DeptAdd</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>DeptUpdate</servlet-name>
+    <servlet-class>com.myh.deptsvlt.DeptUpdate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DeptUpdate</servlet-name>
+    <url-pattern>/DeptUpdate</url-pattern>
+  </servlet-mapping>
+
+
+  <servlet>
+    <servlet-name>UsList</servlet-name>
+    <servlet-class>com.myh.ussvlt.UsList</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UsList</servlet-name>
+    <url-pattern>/UsList</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>UsDelete</servlet-name>
+    <servlet-class>com.myh.ussvlt.UsDelete</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UsDelete</servlet-name>
+    <url-pattern>/UsDelete</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>UsAdd</servlet-name>
+    <servlet-class>com.myh.ussvlt.UsAdd</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UsAdd</servlet-name>
+    <url-pattern>/UsAdd</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>UsUpdate</servlet-name>
+    <servlet-class>com.myh.ussvlt.UsUpdate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UsUpdate</servlet-name>
+    <url-pattern>/UsUpdate</url-pattern>
+  </servlet-mapping>
+
+
+  <servlet>
+    <servlet-name>HosList</servlet-name>
+    <servlet-class>com.myh.hossvlt.HosList</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>HosList</servlet-name>
+    <url-pattern>/HosList</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>HosDelete</servlet-name>
+    <servlet-class>com.myh.hossvlt.HosDelete</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>HosDelete</servlet-name>
+    <url-pattern>/HosDelete</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>HosAdd</servlet-name>
+    <servlet-class>com.myh.hossvlt.HosAdd</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>HosAdd</servlet-name>
+    <url-pattern>/HosAdd</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>HosUpdate</servlet-name>
+    <servlet-class>com.myh.hossvlt.HosUpdate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>HosUpdate</servlet-name>
+    <url-pattern>/HosUpdate</url-pattern>
+  </servlet-mapping>
+
+
+ <servlet>
+    <servlet-name>PhList</servlet-name>
+    <servlet-class>com.myh.phsvlt.PhList</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>PhList</servlet-name>
+    <url-pattern>/PhList</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>PhDelete</servlet-name>
+    <servlet-class>com.myh.phsvlt.PhDelete</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>PhDelete</servlet-name>
+    <url-pattern>/PhDelete</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>PhAdd</servlet-name>
+    <servlet-class>com.myh.phsvlt.PhAdd</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>PhAdd</servlet-name>
+    <url-pattern>/PhAdd</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>PhUpdate</servlet-name>
+    <servlet-class>com.myh.phsvlt.PhUpdate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>PhUpdate</servlet-name>
+    <url-pattern>/PhUpdate</url-pattern>
+  </servlet-mapping>
+
+
+ <servlet>
+    <servlet-name>PaList</servlet-name>
+    <servlet-class>com.myh.pasvlt.PaList</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>PaList</servlet-name>
+    <url-pattern>/PaList</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>PaDelete</servlet-name>
+    <servlet-class>com.myh.pasvlt.PaDelete</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>PaDelete</servlet-name>
+    <url-pattern>/PaDelete</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>PaAdd</servlet-name>
+    <servlet-class>com.myh.pasvlt.PaAdd</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>PaAdd</servlet-name>
+    <url-pattern>/PaAdd</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>PaUpdate</servlet-name>
+    <servlet-class>com.myh.pasvlt.PaUpdate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>PaUpdate</servlet-name>
+    <url-pattern>/PaUpdate</url-pattern>
+  </servlet-mapping>
+
+
+ <servlet>
+    <servlet-name>TrList</servlet-name>
+    <servlet-class>com.myh.trsvlt.TrList</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>TrList</servlet-name>
+    <url-pattern>/TrList</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>TrDelete</servlet-name>
+    <servlet-class>com.myh.trsvlt.TrDelete</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>TrDelete</servlet-name>
+    <url-pattern>/TrDelete</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>TrAdd</servlet-name>
+    <servlet-class>com.myh.trsvlt.TrAdd</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>TrAdd</servlet-name>
+    <url-pattern>/TrAdd</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>TrUpdate</servlet-name>
+    <servlet-class>com.myh.trsvlt.TrUpdate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>TrUpdate</servlet-name>
+    <url-pattern>/TrUpdate</url-pattern>
+  </servlet-mapping>
+
+
+<servlet>
+    <servlet-name>DiList</servlet-name>
+    <servlet-class>com.myh.disvlt.DiList</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DiList</servlet-name>
+    <url-pattern>/DiList</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>DiDelete</servlet-name>
+    <servlet-class>com.myh.disvlt.DiDelete</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DiDelete</servlet-name>
+    <url-pattern>/DiDelete</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>DiAdd</servlet-name>
+    <servlet-class>com.myh.disvlt.DiAdd</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DiAdd</servlet-name>
+    <url-pattern>/DiAdd</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>DiUpdate</servlet-name>
+    <servlet-class>com.myh.disvlt.DiUpdate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DiUpdate</servlet-name>
+    <url-pattern>/DiUpdate</url-pattern>
+  </servlet-mapping>
+
+<filter>
+    <filter-name>AuthFilter</filter-name>
+    <filter-class>com.myh.filter.AuthFilter</filter-class>
+</filter>
+ 
+<filter-mapping>
+    <filter-name>AuthFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+</filter-mapping>
+</web-app>
